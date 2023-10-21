@@ -475,3 +475,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+aspnet/https/localhost.crt
+aspnet/https/localhost.key
+aspnet/https/localhost.pfx
