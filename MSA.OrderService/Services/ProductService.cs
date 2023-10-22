@@ -14,7 +14,7 @@ public class ProductService : IProductService
     {
         var result = await httpClient.GetStringAsync($"v1/product/{id}");
         var existedId = Guid.Empty;
-        Guid.TryParse(result, out existedId);
+        Guid.TryParse(result.Substring(1, result.Length - 2), out existedId);
         if (existedId == id) return await Task.FromResult(true);
 
         return await Task.FromResult(false);
